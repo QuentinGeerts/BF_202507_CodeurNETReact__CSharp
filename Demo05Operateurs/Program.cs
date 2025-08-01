@@ -76,3 +76,89 @@ else
 {
     Console.WriteLine($"o ne fait pas des objects");
 }
+
+// 7. Pattern Matching: (type pattern)
+
+object obj = (long)5;
+
+// 7.1. Version avec if
+
+if (obj is int)
+{
+    Console.WriteLine($"{obj} est un entier.");
+}
+else if (obj is long myLong)
+{
+    Console.WriteLine($"{obj} est un long.");
+    Console.WriteLine($"Type de myLong: {myLong.GetType()}, valeur: {myLong}");
+}
+else if (obj is short)
+{
+    Console.WriteLine($"{obj} est un short.");
+}
+else if (obj is string)
+{
+    Console.WriteLine($"{obj} est une string.");
+    ((string)obj).ToLower();
+}
+else
+{
+    Console.WriteLine($"Type non pris en charge");
+}
+
+// 7.2. Version avec switch
+
+switch (obj)
+{
+    case int: Console.WriteLine("obj est un entier."); break;
+
+    case long: Console.WriteLine("obj est un long"); break;
+
+    case short: Console.WriteLine("obj est un short"); break;
+
+    case string myString:
+        Console.WriteLine($"{myString.ToLower()}");
+        break;
+
+    default: break;
+}
+
+// 8. Opérateur as
+// Permet de convertir dans un type mais s'il n'y arrive pas retourne null
+
+object obj2 = "Hello";
+
+string str1 = obj2 as string;
+str1 = o is string ? (string)o : null;
+
+obj2 = 5;
+
+
+// int monEntier = obj2 as int; // Ne fonctionne pas
+int? monEntier = obj2 as int?;
+int monEntier2 = obj2 as int? ?? 0;
+
+// 9. Opérateur checked & unchecked
+// Permet de vérifier les overflows (les dépassements de capacité)
+
+int monEntier3 = int.MaxValue;
+
+//int result = checked(monEntier3 + 1);
+//checked
+//{
+//    int result1 = monEntier3 + 1;
+//    int result2 = monEntier3 + 1;
+//    int result3 = monEntier3 + 1;
+//    int result4 = monEntier3 + 1;
+//}
+
+// Après configuration dans les propriétés du projet
+// > Build > Advanced > Check for arithmetic overflows
+//int result = monEntier3 + 1;
+
+int result = unchecked(monEntier3 + 1);
+
+unchecked
+{
+    // ...
+}
