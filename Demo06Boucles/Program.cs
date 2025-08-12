@@ -90,3 +90,28 @@ foreach (var entier in entiers)
 {
     Console.WriteLine($"Entier: {entier}");
 }
+
+// 5. Break & Continue
+
+// break: permet de sortir d'une structure
+// continue: permet de sortir d'une itération
+
+for (int k = 0; k < 10; k++)
+{
+    if (k == 3) break;
+
+    Console.WriteLine($"{k}");
+}
+
+Console.WriteLine("Fin de programme");
+
+
+for (int k = 0; k < 10; k++)
+{
+    if (k == 3) continue;
+
+    Console.WriteLine($"{k}");
+}
+
+Console.WriteLine("Fin de programme");
+
