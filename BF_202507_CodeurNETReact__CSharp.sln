@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo07Tableaux", "Demo07Tab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExoBonusTableauA", "ExoBonusTableauA\ExoBonusTableauA.csproj", "{84D8B7BB-2AC5-46B3-B718-E9F092B47355}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo08Structures", "Demo08Structures\Demo08Structures.csproj", "{E85D9D9A-507F-4C6A-9270-C31F930F510B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{84D8B7BB-2AC5-46B3-B718-E9F092B47355}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84D8B7BB-2AC5-46B3-B718-E9F092B47355}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84D8B7BB-2AC5-46B3-B718-E9F092B47355}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85D9D9A-507F-4C6A-9270-C31F930F510B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85D9D9A-507F-4C6A-9270-C31F930F510B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85D9D9A-507F-4C6A-9270-C31F930F510B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85D9D9A-507F-4C6A-9270-C31F930F510B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -137,6 +143,7 @@ Global
 		{3AC7E967-6BAD-478A-882D-1B4B1CF814AE} = {6A1477DF-0906-4DDB-83E8-E3A96C1144B9}
 		{308AEDCD-A9CF-471F-9AAD-954380F2D993} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{84D8B7BB-2AC5-46B3-B718-E9F092B47355} = {6A1477DF-0906-4DDB-83E8-E3A96C1144B9}
+		{E85D9D9A-507F-4C6A-9270-C31F930F510B} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A21DE734-8270-4606-A1ED-F5F7F351E2B0}
