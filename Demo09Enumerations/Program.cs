@@ -1,8 +1,9 @@
 ﻿// Démonstration 08 - Structures
 
-using Demo08Structures.Models;
+using Demo09Enumerations.Enums;
+using Demo09Structures.Models;
 
-Personnage p1;
+Personnage p1 = new Personnage();
 
 p1.nom = "Oyumiro";
 p1.niveau = 1;
@@ -30,7 +31,7 @@ Personnage p2 = new Personnage()
 Console.WriteLine($"P1 se présente: {p1.SePresenter()}");
 Console.WriteLine($"P2 se présente: {p2.SePresenter()}");
 
-Personnage p3 = new Personnage("Bill", 1, 15, 12, 19);
+Personnage p3 = new Personnage("Bill", Archetype.Mage, 1, 15, 12, 19);
 Console.WriteLine($"P3 se présente: {p3.SePresenter()}");
 
 Console.WriteLine(p1);
@@ -47,11 +48,11 @@ Console.WriteLine($"Nom de la guilde: {guilde.Nom}");
 
 Console.WriteLine($"Nombre de membres dans la guilde: {guilde.Count}");
 
-Personnage p4 = new Personnage("Thorn", force: 15,intelligence: 5, agilite: 12);
+Personnage p4 = new Personnage("Thorn", Archetype.Guerrier, force: 15,intelligence: 5, agilite: 12);
 Console.WriteLine();
 Console.WriteLine($"{p4}");
 
-Personnage p5 = new Personnage("Thrall");
+Personnage p5 = new Personnage("Thrall", Archetype.Pretre);
 Console.WriteLine($"{p5}");
 
 guilde.AjouterMembre(p1, p2, p3, p4, p5);
@@ -82,3 +83,9 @@ else
 }
 
 p?.AfficherDetails();
+
+Console.WriteLine($"\nCréation d'un personnage: \n");
+
+Personnage nouveauPersonnage = Personnage.CreerPersonnage();
+
+Console.WriteLine($"Nouveau personnage: {nouveauPersonnage}");
